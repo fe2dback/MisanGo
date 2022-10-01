@@ -9,13 +9,22 @@ public class ReSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
-        player.transform.position = transform.position;
+        if(DataMgr.instance.startCheck == false)
+        {
+            player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
+            player.transform.position = transform.position;
+            DataMgr.instance.startCheck = true;
+        }
+        else
+        {
+            player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
+            player.transform.position = DataMgr.instance.playerTp;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAction : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerAction : MonoBehaviour
     float h;
     float v;
     bool isHorizonMove;
+    public int SceneNumber;
 
     private void Awake()
     {
@@ -20,7 +22,7 @@ public class PlayerAction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SceneNumber = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -64,6 +66,31 @@ public class PlayerAction : MonoBehaviour
         else
         {
             anim.SetBool("isChange", false);
+        }
+
+        if(rb2d.transform.position.x > 9 && SceneNumber == 1)
+        {
+            DataMgr.instance.playerTp = new Vector3((rb2d.transform.position.x * -1) + 1, rb2d.transform.position.y);
+            SceneManager.LoadScene("hallway1_Scene");
+        }
+        else if(rb2d.transform.position.x > 9 && SceneNumber == 2)
+        {
+            DataMgr.instance.playerTp = new Vector3((rb2d.transform.position.x * -1) + 1, rb2d.transform.position.y);
+            SceneManager.LoadScene("hallway2_Scene");
+        }
+        else if(rb2d.transform.position.x < -9 && SceneNumber == 2)
+        {
+            DataMgr.instance.playerTp = new Vector3((rb2d.transform.position.x * -1) - 1, rb2d.transform.position.y);
+            SceneManager.LoadScene("PlayScene");
+        }
+        else if (rb2d.transform.position.x > 9 && SceneNumber == 3)
+        {
+            
+        }
+        else if (rb2d.transform.position.x < -9 && SceneNumber == 3)
+        {
+            DataMgr.instance.playerTp = new Vector3((rb2d.transform.position.x * -1) -1, rb2d.transform.position.y);
+            SceneManager.LoadScene("hallway1_Scene");
         }
     }
 
