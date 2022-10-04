@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public TalkManager talkManager;
     public QuestManager questManager;
-    public GameObject talkPanel;
+    public Animator talkPanel;
     public TextMeshProUGUI talkText;
     public GameObject scanObject;
     public Image portraitImg;
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         Talk(objData.id, objData.isNpc);
 
         // Visible Talk for Action
-        talkPanel.SetActive(isAction);
+        talkPanel.SetBool("isShow", isAction);
     }
 
     void Talk(int id, bool isNpc)

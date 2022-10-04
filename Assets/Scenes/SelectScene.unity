@@ -2725,13 +2725,14 @@ GameObject:
   - component: {fileID: 1532319512}
   - component: {fileID: 1532319514}
   - component: {fileID: 1532319513}
+  - component: {fileID: 1532319515}
   m_Layer: 5
   m_Name: TalkSet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1532319512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2752,7 +2753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: -700}
   m_SizeDelta: {x: -40, y: 250}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1532319513
@@ -2793,6 +2794,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532319511}
   m_CullTransparentMesh: 1
+--- !u!95 &1532319515
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532319511}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95a2e87e3901a1f4ca130f377c2a65d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1607389141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,7 +3207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkManager: {fileID: 759138992}
   questManager: {fileID: 33619786}
-  talkPanel: {fileID: 1532319511}
+  talkPanel: {fileID: 1532319515}
   talkText: {fileID: 2086515610}
   scanObject: {fileID: 0}
   portraitImg: {fileID: 2003554235}
@@ -3303,6 +3324,7 @@ GameObject:
   - component: {fileID: 2003554234}
   - component: {fileID: 2003554236}
   - component: {fileID: 2003554235}
+  - component: {fileID: 2003554237}
   m_Layer: 5
   m_Name: Portrait
   m_TagString: Untagged
@@ -3368,6 +3390,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003554233}
   m_CullTransparentMesh: 1
+--- !u!95 &2003554237
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003554233}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f17648a9c8f5f6d4d9675994dca06602, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2040399804
 GameObject:
   m_ObjectHideFlags: 0
