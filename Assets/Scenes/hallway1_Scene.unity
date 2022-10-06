@@ -156,6 +156,7 @@ MonoBehaviour:
   - {fileID: 8942427325741681994, guid: cade8c0998adeff4abcfb15a7add07f5, type: 3}
   - {fileID: 9066780500442519088, guid: c81e1f7f45f7db842b4553e0db126ea9, type: 3}
   player: {fileID: 0}
+  SceneNumber: 0
 --- !u!4 &17020545
 Transform:
   m_ObjectHideFlags: 0
