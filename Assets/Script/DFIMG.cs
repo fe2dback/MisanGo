@@ -20,7 +20,10 @@ public class  DFIMG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SpriteRenderer check1 = gameObject.GetComponent<SpriteRenderer>();
         SpriteRenderer check2 = gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer check3 = gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer check4 = gameObject.GetComponent<SpriteRenderer>();
         check_1 = false;
         check_2 = false;
         check_3 = false;
@@ -77,52 +80,55 @@ public class  DFIMG : MonoBehaviour
 
     IEnumerator first()
     {
-        for (float i = 0f; i <= 1; i += 0.1f) {
+        for (float i = 0f; i <= 1f; i += 0.1f) {
             
             Color color = new Vector4(1, 1, 1, i); 
             check1.color = color; 
             yield return 0;
-            check_1 = true;
         }
+        check_1 = true;
         Debug.Log("1");
     }
 
     IEnumerator second()
     {
-        for (float j = 0f; j <= 1; j += 0.1f)
+        for (float j = 0f; j <= 1f; j += 0.1f)
         {
 
             Color color = new Vector4(1, 1, 1, j);
             check2.color = color;
             yield return 0;
-            check_2 = true;
+            
         }
+        check_2 = true;
         Debug.Log("2");
     }
 
     IEnumerator third()
     {
-        for (float k = 0f; k <= 1; k += 0.1f)
+        for (float k = 0f; k <= 1f; k += 0.1f)
         {
 
             Color color = new Vector4(1, 1, 1, k);
             check3.color = color;
             yield return 0;
-            check_3 = true;
+            
         }
+        check_3 = true;
         Debug.Log("3");
     }
 
     IEnumerator fourth()
     {
-        for (float f = 0f; f <= 1; f += 0.1f)
+        for (float f = 0f; f <= 1f; f += 0.1f)
         {
 
             Color color = new Vector4(1, 1, 1, f);
             check4.color = color;
             yield return 0;
-            check_4 = true;
+            
         }
+        check_4 = true;
         Debug.Log("4");
     }
 }
