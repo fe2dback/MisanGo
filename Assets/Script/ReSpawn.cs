@@ -18,7 +18,7 @@ public class ReSpawn : MonoBehaviour
             player.transform.position = transform.position;
             DataMgr.instance.startCheck = true;
         }
-        else if(SceneNumber == 5)
+        else if(SceneNumber == 4)
         {
             player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
             player.transform.position = transform.position;

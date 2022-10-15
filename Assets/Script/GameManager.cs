@@ -10,12 +10,15 @@ public class GameManager : MonoBehaviour
     public TalkManager talkManager;
     public QuestManager questManager;
     public Animator talkPanel;
-    public TextMeshProUGUI talkText;
+    public TypeEffect talk;
     public GameObject scanObject;
     public Image portraitImg;
+    public Sprite prevPortrait;
+    public Animator portraitAnim;
     public bool isAction;
     public int talkIndex;
     public int SceneNumber;
+    
 
     public static GameManager instance;
 
@@ -55,9 +58,21 @@ public class GameManager : MonoBehaviour
 
     void Talk(int id, bool isNpc)
     {
+        int questTalkIndex = 0;
+        string talkData = "";
+
         // Set Talk Data
-        int questTalkIndex = questManager.GetQuestTalkIndex(id);
-        string talkData = talkManager.GetTalk(id+ questTalkIndex, talkIndex);
+        if (talk.isAnim)
+        {
+            talk.SetMsg("");
+            return;
+        }
+        else
+        {
+            questTalkIndex = questManager.GetQuestTalkIndex(id);
+            talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
+
+        }
 
         // End Talk
         if(talkData == null)
@@ -71,15 +86,25 @@ public class GameManager : MonoBehaviour
         // Continue Talk
         if(isNpc)
         {
-            talkText.text = talkData.Split(':')[0];
+            talk.SetMsg(talkData.Split(':')[0]);
 
             // Show Portrait
             portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
             portraitImg.color = new Color(1, 1, 1, 1);
+            // Animation Portrait
+
+            /*
+            if(prevPortrait != portraitImg.sprite)
+            {
+                portraitAnim.SetTrigger("doEffect");
+                prevPortrait = portraitImg.sprite;
+            }
+            */
+            
         }
         else
         {
-            talkText.text = talkData;
+            talk.SetMsg(talkData);
 
             // Hide Portrait
             portraitImg.color = new Color(1, 1, 1, 0);
