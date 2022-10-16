@@ -16,6 +16,7 @@ public class PlayerAction : MonoBehaviour
     float v;
     bool isHorizonMove;
     public int SceneNumber;
+    bool check = false;
 
     private void Awake()
     {
@@ -26,6 +27,15 @@ public class PlayerAction : MonoBehaviour
     void Start()
     {
         SceneNumber = SceneManager.GetActiveScene().buildIndex;
+        if (SceneNumber == 6)
+        {
+            DataMgr.instance.AppSceneCheck = true;
+        }
+        else if(SceneNumber != 0 && check == false)
+        {
+            QuestPanel.instance.SetActive();
+            check = true;
+        }
     }
 
     // Update is called once per frame

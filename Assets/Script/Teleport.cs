@@ -20,7 +20,11 @@ public class Teleport : MonoBehaviour
     {
         if(collision.CompareTag("Player") && checkObj.CompareTag("TeacherRoom"))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("TeacherRoom_Scene");
+        }
+        else if(collision.CompareTag("Player") && checkObj.CompareTag("ApplicationProgrammingRoom"))
+        {
+            SceneManager.LoadScene("ApplicationProgrammingRoom");
         }
         else if(collision.CompareTag("Player") && checkObj.CompareTag("hallway3"))
         {

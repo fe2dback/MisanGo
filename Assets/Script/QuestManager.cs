@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
@@ -21,9 +22,19 @@ public class QuestManager : MonoBehaviour
     {
         questList.Add(10, new QuestData("장성국 선생님한테 퀘스트 받기", new int[] {1000}));
 
-        questList.Add(20, new QuestData("선생님들께 퀘스트 받기", new int[] {2000}));
+        questList.Add(20, new QuestData("김정태 선생님께 퀘스트 받기", new int[] {2000}));
 
-        questList.Add(30, new QuestData("퀘스트 클리어", new int[] { 0 }));
+        questList.Add(30, new QuestData("박하예린 선생님께 퀘스트 받기", new int[] {3000}));
+
+        questList.Add(40, new QuestData("박하예린 선생님 퀘스트 클리어하기", new int[] {3000}));
+
+        questList.Add(50, new QuestData("신재경 선생님께 퀘스트 받기", new int[] { 4000 }));
+
+        questList.Add(60, new QuestData("김효영 선생님께 퀘스트 받기", new int[] { 5000 }));
+
+        questList.Add(70, new QuestData("김효영 선생님 퀘스트 클리어하기", new int[] { 5000 }));
+
+        questList.Add(80, new QuestData("퀘스트 클리어", new int[] { 0 }));
     }
 
     public int GetQuestTalkIndex(int id)
@@ -52,9 +63,15 @@ public class QuestManager : MonoBehaviour
         return questList[questId].questName;
     }
 
-    void NextQuest()
+    public void NextQuest()
     {
         questId += 10;
         questActionIndex = 0;
+
+        // Park_T Quest
+        if(questId == 40)
+        {
+            SceneManager.LoadScene("FindDFIMG");
+        }
     }
 }

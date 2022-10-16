@@ -18,13 +18,14 @@ public class GameManager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     public int SceneNumber;
+    public bool gameClear;
     
 
     public static GameManager instance;
 
     private void Awake()
     {
-        SceneNumber = SceneManager.GetActiveScene().buildIndex;
+        //SceneNumber = SceneManager.GetActiveScene().buildIndex;
         if (instance == null)
         {
             instance = this;
@@ -39,10 +40,20 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Debug.Log(questManager.CheckQuest());
-
+        QuestPanel.instance.questPanelTalk();
 
         //talkPanel = GameObjGet.instance.Panel;
         //talkText = GameObjGet.instance.Text;
+    }
+
+    public void gameCheck()
+    {
+        if(gameClear == true)
+        {
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
     }
 
     public void Action(GameObject scanObj)
@@ -80,6 +91,7 @@ public class GameManager : MonoBehaviour
             isAction = false;
             talkIndex = 0;
             Debug.Log(questManager.CheckQuest(id));
+            QuestPanel.instance.questPanelTalk();
             return;
         }
 

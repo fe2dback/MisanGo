@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class  DFIMG : MonoBehaviour
 {
@@ -71,7 +72,10 @@ public class  DFIMG : MonoBehaviour
         if(check_1 == true && check_2 == true && check_3  == true && check_4 == true)
         {
             //æ¿¿¸»Ø
-            Debug.Log("All Check");
+            DataMgr.instance.FindDfImg = true;
+            GameManager.instance.gameClear = true;
+            GameManager.instance.gameCheck();
+            SceneManager.LoadScene(4);
         }
 
 
@@ -87,7 +91,7 @@ public class  DFIMG : MonoBehaviour
             yield return 0;
         }
         check_1 = true;
-        Debug.Log("1");
+        //Debug.Log("1");
     }
 
     IEnumerator second()
@@ -101,7 +105,7 @@ public class  DFIMG : MonoBehaviour
             
         }
         check_2 = true;
-        Debug.Log("2");
+        //Debug.Log("2");
     }
 
     IEnumerator third()
@@ -115,7 +119,7 @@ public class  DFIMG : MonoBehaviour
             
         }
         check_3 = true;
-        Debug.Log("3");
+        //Debug.Log("3");
     }
 
     IEnumerator fourth()
@@ -129,6 +133,6 @@ public class  DFIMG : MonoBehaviour
             
         }
         check_4 = true;
-        Debug.Log("4");
+        //Debug.Log("4");
     }
 }

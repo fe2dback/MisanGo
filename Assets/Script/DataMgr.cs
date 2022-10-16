@@ -27,4 +27,6 @@ public class DataMgr : MonoBehaviour
     public Character currentCharacter;
     public bool startCheck = false;
     public Vector3 playerTp;
+    public bool AppSceneCheck = false;
+    public bool FindDfImg = false;
 }

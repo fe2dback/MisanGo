@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/hallway3_Scene.unity
     guid: 8669c2de299a0a445a95e3629f1ff7de
   - enabled: 1
+    path: Assets/Scenes/ACentralHall.unity
+    guid: accb8be9ac1a86448b6783bb072928e0
+  - enabled: 1
     path: Assets/Scenes/TeacherRoom_Scene.unity
     guid: 3813675e5bf158842928c212eece6db5
+  - enabled: 1
+    path: Assets/Scenes/ApplicationProgrammingRoom.unity
+    guid: 65dcaa8769e644443a25fb4820f8e0a4
   - enabled: 1
     path: Assets/Scenes/hallway1_Scene.unity
     guid: adabb3c606f19454689179c83f8d338e

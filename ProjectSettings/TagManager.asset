@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TeacherRoom
   - hallway3
+  - ApplicationProgrammingRoom
   layers:
   - Default
   - TransparentFX

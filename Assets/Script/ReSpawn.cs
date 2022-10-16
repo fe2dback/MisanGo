@@ -18,10 +18,22 @@ public class ReSpawn : MonoBehaviour
             player.transform.position = transform.position;
             DataMgr.instance.startCheck = true;
         }
-        else if(SceneNumber == 4)
+        else if(SceneNumber == 5 || SceneNumber == 6)
         {
             player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
             player.transform.position = transform.position;
+        }
+        else if(SceneNumber == 3 && DataMgr.instance.AppSceneCheck == true)
+        {
+            player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
+            player.transform.position = transform.position;
+            DataMgr.instance.AppSceneCheck = false;
+        }   
+        else if(SceneNumber == 6 && DataMgr.instance.FindDfImg == true)
+        {
+            player = Instantiate(charPrefabs[(int)DataMgr.instance.currentCharacter]);
+            player.transform.position = transform.position;
+            DataMgr.instance.FindDfImg = false;
         }
         else
         {
@@ -31,8 +43,4 @@ public class ReSpawn : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 }

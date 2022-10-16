@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8877632489db014aa26377c307b5338
+guid: 3696b9e9fb52cc343912c658dd988d7f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,85 +116,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl_run2_0
+      name: button_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 20
-        width: 190
-        height: 260
+        x: 20
+        y: 370
+        width: 520
+        height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80c8cd37734fd848953ebf1d39ab390
-      internalID: -1896809546
+      spriteID: e6c556aff93071247b6e8f88dca1a1f1
+      internalID: -1916853097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl_run2_1
+      name: button_4
       rect:
         serializedVersion: 2
-        x: 350
-        y: 20
-        width: 190
-        height: 250
+        x: 630
+        y: 290
+        width: 240
+        height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bae5780305d6074e9b0494f11b4ee9c
-      internalID: 825884719
+      spriteID: d06a4d957ef16434b91f50590627a598
+      internalID: -2019371287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl_run2_2
+      name: button_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 20
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe1de1fcd13ae446a43e602ccef4df7
+      internalID: -1844102298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 40
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0be207a5e21a840a5450b9791e0fea
+      internalID: 1548230833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_21
       rect:
         serializedVersion: 2
         x: 650
-        y: 20
-        width: 190
-        height: 260
+        y: 40
+        width: 240
+        height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee5ca69859a13fb42ac1a02d313fbec0
-      internalID: 815293010
+      spriteID: a0868b9de9a84434d8f3bbbcde7d76ff
+      internalID: -1115739136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl_run2_3
+      name: button_22
       rect:
         serializedVersion: 2
-        x: 950
-        y: 20
-        width: 190
-        height: 250
+        x: 900
+        y: 40
+        width: 240
+        height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be3b6dc055f4f684893df3b307da9b29
-      internalID: -817234158
+      spriteID: ea225423255c33d4d89225cef91544e9
+      internalID: 513477370
       vertices: []
       indices: 
       edges: []
@@ -210,10 +252,47 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      girl_run2_2: 815293010
-      girl_run2_0: -1896809546
-      girl_run2_1: 825884719
-      girl_run2_3: -817234158
+      button_9: 1275560285
+      button_39: 758337706
+      button_28: 1792549579
+      button_32: 1814886256
+      button_19: -1623987902
+      button_14: -1844102298
+      button_16: 71066112
+      button_1: 1648651982
+      button_8: 490770944
+      button_29: 800772065
+      button_23: -1545005021
+      button_26: 499685872
+      button_7: 869980053
+      button_17: 691308491
+      button_37: -701613376
+      button_20: 1548230833
+      button_30: -415437768
+      button_22: 513477370
+      button_25: 1658542873
+      button_15: 1935502779
+      button_11: 972419079
+      button_36: -1712757861
+      button_24: 245429874
+      button_31: 187196707
+      button_33: -1691883189
+      button_4: -2019371287
+      button_13: -288144778
+      button_5: -19805662
+      button_40: -155424095
+      button_34: 721202494
+      button_3: 1484918049
+      button_12: 1986933147
+      button_10: -297296854
+      button_21: -1115739136
+      button_27: -1169716875
+      button_35: -1880819475
+      button_2: 1108550248
+      button_0: -1916853097
+      button_6: 797391670
+      button_38: -1780169690
+      button_18: 554721976
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
