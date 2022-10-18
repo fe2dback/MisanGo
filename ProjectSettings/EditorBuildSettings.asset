@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FindDFIMG.unity
     guid: 70689ca0936e9d3459e49b21c17edc3f
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: fd0f4a2718fdae743b537754ded74bbe
   m_configObjects: {}
