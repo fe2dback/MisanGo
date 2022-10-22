@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-    }
+    
 
     public float speed;
     public bool isTouchTop;
@@ -18,9 +17,15 @@ public class Player : MonoBehaviour
     public float maxShot;
     public float curShot;
     public int Hp;
+    public float times;
+    private float xAxis;
 
     public bool[] joyControl;
     public bool isControl;
+
+    void Start()
+    {
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,11 +34,16 @@ public class Player : MonoBehaviour
         health();
     }
 
+
     void health()
     {
         if(Hp <= 0)
         {
             Debug.Log("Die");
+            
+            SceneManager.LoadScene("shooting");
+            //»ç¸Á½Ã ¾À ¸®·Ñ
+            
         }    
     }
 
@@ -58,9 +68,11 @@ public class Player : MonoBehaviour
 
     void Move()
     {
+        
+
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
-
+        /*
         if (joyControl[0]) { h = -1; v = 1; }
         if (joyControl[1]) { h = 0; v = 1; }
         if (joyControl[2]) { h = 1; v = 1; }
@@ -71,14 +83,15 @@ public class Player : MonoBehaviour
         if (joyControl[6]) { h = -1; v = -1; }
         if (joyControl[7]) { h = 0; v = -1; }
         if (joyControl[8]) { h = 1; v = -1; }
+        */
 
 
-
-        if ((isTouchRight && h == 1) || (isTouchLeft && h == -1) || !isControl)
+        if ((isTouchRight && h == 1) || (isTouchLeft && h == -1)/* || !isControl*/)
             h = 0;
         
-        if ((isTouchTop && v == 1) || (isTouchBottom && v == -1) || !isControl)
+        if ((isTouchTop && v == 1) || (isTouchBottom && v == -1)/* || !isControl*/)
             v = 0;
+        
         Vector3 curPos = transform.position;
         Vector3 nextPos = new Vector3(h, v, 0) * speed * Time.deltaTime;
 
