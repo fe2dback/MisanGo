@@ -28,7 +28,19 @@ public class Teleport : MonoBehaviour
         }
         else if(collision.CompareTag("Player") && checkObj.CompareTag("hallway3"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("hallway3_Scene");
+        }
+        else if (collision.CompareTag("Player") && checkObj.CompareTag("Game1"))
+        {
+            SceneManager.LoadScene("Game1_Scene");
+        }
+        else if (collision.CompareTag("Player") && checkObj.CompareTag("Game2"))
+        {
+            SceneManager.LoadScene("Game2_Scene");
+        }
+        else if (collision.CompareTag("Player") && checkObj.CompareTag("hallway4"))
+        {
+            SceneManager.LoadScene("hallway4_Scene");
         }
     }
 }

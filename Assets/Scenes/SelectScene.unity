@@ -1814,6 +1814,10 @@ MonoBehaviour:
   - {fileID: 1014623145, guid: d5f117085fae0e74cbdef78ec37c1a96, type: 3}
   - {fileID: -1100450881, guid: 1c23edfdd66e7aa4cab6608e8b4ebc65, type: 3}
   - {fileID: 2049332215, guid: 82234540ae9b585438190f4131e27647, type: 3}
+  - {fileID: 1043079744, guid: f77b08a41f218624d8472b0e339cfa30, type: 3}
+  - {fileID: 1959988117, guid: f443352f5e245524aad483b38a2b53a8, type: 3}
+  - {fileID: 202074040, guid: c8a5a77304f7c524e93cfbe6233efbca, type: 3}
+  - {fileID: 204190119, guid: a540273203b1a63488808ddba636c818, type: 3}
 --- !u!4 &759138993
 Transform:
   m_ObjectHideFlags: 0
@@ -2953,8 +2957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.9058, y: 20.5727}
-  m_SizeDelta: {x: 514.5394, y: 97.2203}
+  m_AnchoredPosition: {x: 6.5546036, y: 20.5727}
+  m_SizeDelta: {x: 560.7574, y: 97.2203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479601611
 MonoBehaviour:
@@ -3143,8 +3147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 672, y: 446}
-  m_SizeDelta: {x: -1201.5168, y: -754.4409}
+  m_AnchoredPosition: {x: 616.4404, y: 446}
+  m_SizeDelta: {x: -1090.3977, y: -754.4409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503831524
 MonoBehaviour:
@@ -3686,7 +3690,8 @@ MonoBehaviour:
   isAction: 0
   talkIndex: 0
   SceneNumber: 0
-  gameClear: 0
+  DfImgGameClear: 0
+  MathGameClear: 0
 --- !u!4 &1694692934
 Transform:
   m_ObjectHideFlags: 0

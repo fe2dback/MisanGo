@@ -28,5 +28,8 @@ public class DataMgr : MonoBehaviour
     public bool startCheck = false;
     public Vector3 playerTp;
     public bool AppSceneCheck = false;
+    public bool Game2SceneCheck = false;
     public bool FindDfImg = false;
+    public bool flappyBird = false;
+    public bool shooting = true;
 }

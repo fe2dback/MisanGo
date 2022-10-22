@@ -9,6 +9,9 @@ TagManager:
   - ApplicationProgrammingRoom
   - Border
   - BorderBullet
+  - Game1
+  - Game2
+  - hallway4
   layers:
   - Default
   - TransparentFX

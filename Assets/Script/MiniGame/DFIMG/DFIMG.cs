@@ -73,9 +73,9 @@ public class  DFIMG : MonoBehaviour
         {
             //æ¿¿¸»Ø
             DataMgr.instance.FindDfImg = true;
-            GameManager.instance.gameClear = true;
+            GameManager.instance.DfImgGameClear = true;
             GameManager.instance.gameCheck();
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("ApplicationProgrammingRoom");
         }
 
 

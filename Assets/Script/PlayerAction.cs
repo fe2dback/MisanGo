@@ -27,9 +27,13 @@ public class PlayerAction : MonoBehaviour
     void Start()
     {
         SceneNumber = SceneManager.GetActiveScene().buildIndex;
-        if (SceneNumber == 6)
+        if (SceneNumber == 8)
         {
             DataMgr.instance.AppSceneCheck = true;
+        }
+        else if(SceneNumber == 15)
+        {
+            DataMgr.instance.Game2SceneCheck = true;
         }
         else if(SceneNumber != 0 && check == false)
         {

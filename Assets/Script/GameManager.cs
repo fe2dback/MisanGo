@@ -18,7 +18,10 @@ public class GameManager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     public int SceneNumber;
-    public bool gameClear;
+
+    public bool DfImgGameClear;
+    public bool MathGameClear;
+    public bool ShootingGameClear;
     
 
     public static GameManager instance;
@@ -48,12 +51,28 @@ public class GameManager : MonoBehaviour
 
     public void gameCheck()
     {
-        if(gameClear == true)
+        
+        if(DfImgGameClear == true)
         {
             questManager.NextQuest();
             Debug.Log(questManager.CheckQuest());
             QuestPanel.instance.questPanelTalk();
         }
+        else if(MathGameClear == true)
+        {
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
+        
+        else if(ShootingGameClear == true)
+        {
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
+        
+        
     }
 
     public void Action(GameObject scanObj)

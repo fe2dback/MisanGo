@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour
 {
@@ -36,11 +37,15 @@ public class timer : MonoBehaviour
 
 		if (begin < 0)
 		{
-			Debug.Log("end");
+			//클리어 씬전환
+			DataMgr.instance.shooting = true;
+			GameManager.instance.ShootingGameClear = true;
+			GameManager.instance.gameCheck();
+			SceneManager.LoadScene("Game1_Scene");
+
 			timeCounter = false;
 			counterText.color = Color.green;
 			counterText.text = "Clear!";
-			//클리어 씬전환
 		}
 	}
 }
