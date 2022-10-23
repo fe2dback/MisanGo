@@ -36,11 +36,18 @@ public class inputField : MonoBehaviour
             GameManager.instance.MathGameClear = true;
             GameManager.instance.gameCheck();
             SceneManager.LoadScene("TeacherRoom_Scene");
+            AudioManager.instance.missionBackgroundAudioStop();
+            AudioManager.instance.mainAudioStart();
             
+
         }
         else
         {
-            fail.SetActive(true);
+            if(answer != "16")
+            {
+                fail.SetActive(true);
+            }
+            
         }
     }
 }

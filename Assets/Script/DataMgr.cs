@@ -29,7 +29,12 @@ public class DataMgr : MonoBehaviour
     public Vector3 playerTp;
     public bool AppSceneCheck = false;
     public bool Game2SceneCheck = false;
+    public bool ClassRoomCheck = false;
     public bool FindDfImg = false;
     public bool flappyBird = false;
-    public bool shooting = true;
+    public bool shooting = false;
+    public bool EnglishGame = false;
+    public bool AlgorithmsGame = false;
+    public bool CardGame = false;
+    public string nameSave;
 }

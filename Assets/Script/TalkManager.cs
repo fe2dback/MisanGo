@@ -22,22 +22,42 @@ public class TalkManager : MonoBehaviour
         // Talk Data
         // Npc Jang_T : 1000, Npc Kim_T : 2000, Npc Park_T : 3000
         talkData.Add(1000, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0"});
+        talkData.Add(1000 + 100, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0" });
+        talkData.Add(1000 + 200, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0" });
 
         talkData.Add(2000, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0"});
+        talkData.Add(2000 + 100, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0" });
+        talkData.Add(2000 + 200, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0" });
 
         talkData.Add(3000, new string[] { "안녕하세요. 디자인을 가르치고 있는 박하예린 선생님이에요.:0" });
+        talkData.Add(3000 + 100, new string[] { "안녕하세요. 디자인을 가르치고 있는 박하예린 선생님이에요.:0" });
+        talkData.Add(3000 + 200, new string[] { "안녕하세요. 디자인을 가르치고 있는 박하예린 선생님이에요.:0" });
 
         talkData.Add(4000, new string[] { "안녕 나는 발명을 가르치고 있는 신재경 선생님이에요.:0" });
+        talkData.Add(4000 + 100, new string[] { "안녕 나는 발명을 가르치고 있는 신재경 선생님이에요.:0" });
+        talkData.Add(4000 + 200, new string[] { "안녕 나는 발명을 가르치고 있는 신재경 선생님이에요.:0" });
 
         talkData.Add(5000, new string[] { "안녕하세요. 선생님도 디자인을 맡은 김효영 선생님입니다.:0" });
+        talkData.Add(5000 + 100, new string[] { "안녕하세요. 선생님도 디자인을 맡은 김효영 선생님입니다.:0" });
 
         talkData.Add(6000, new string[] { "안녕~ 프로그래밍과 게임제작을 가르치는 이희수 선생님이에요.:0" });
+        talkData.Add(6000 + 100, new string[] { "안녕~ 프로그래밍과 게임제작을 가르치는 이희수 선생님이에요.:0" });
+        talkData.Add(6000 + 200, new string[] { "안녕~ 프로그래밍과 게임제작을 가르치는 이희수 선생님이에요.:0" });
 
         talkData.Add(7000, new string[] { "안녕하세요. 저는 드론과 프로그래밍을 가르치고 있는 오세운 선생님이에요.:0" });
+        talkData.Add(7000 + 200, new string[] { "안녕하세요. 저는 드론과 프로그래밍을 가르치고 있는 오세운 선생님이에요.:0" });
 
         talkData.Add(8000, new string[] { "안녕~~ 저는 영어를 가르치는 김미리입니다~:0" });
+        talkData.Add(8000 + 100, new string[] { "안녕~~ 저는 영어를 가르치는 김미리입니다~:0" });
+        talkData.Add(8000 + 200, new string[] { "안녕~~ 저는 영어를 가르치는 김미리입니다~:0" });
 
         talkData.Add(9000, new string[] { "안녕하세요. 선생님은 프로그래밍과 가상현실 수업을 하고있는 정성일 선생님입니다.:0" });
+        talkData.Add(9000 + 100, new string[] { "안녕하세요. 선생님은 프로그래밍과 가상현실 수업을 하고있는 정성일 선생님입니다.:0" });
+        talkData.Add(9000 + 200, new string[] { "안녕하세요. 선생님은 프로그래밍과 가상현실 수업을 하고있는 정성일 선생님입니다.:0" });
+
+        talkData.Add(10000, new string[] { "test:0" });
+        talkData.Add(10000 + 100, new string[] { "test:0" });
+        talkData.Add(10000 + 200, new string[] { "test:0" });
 
         // Quest Talk
         talkData.Add(10 + 1000, new string[] {"안녕! 우리 과에 온걸 환영합니다. 5층에 방문해줘서 고마워요.:0", "나는 인공지능콘텐츠과 부장 장성국이라고해요. \n" +
@@ -67,7 +87,7 @@ public class TalkManager : MonoBehaviour
 
         talkData.Add(170 + 3000, new string[] { "안녕하세요. 디자인을 가르치고 있는 박하예린 선생님이에요.:0", "디자인 처음에는 어렵겠지만 쉽고 재미있게 여러분과 함께 수업을 진행할 거랍니다.\n선생님이 주는 이 그림을 보고 같은 그림이지만 다른색을 찾아봅시다.:0" });
 
-        talkData.Add(190 + 3000, new string[] { "눈썰미가 대단하네요~\n자 거의 마지막입니다. A.I동상이있는 중앙홀로 가볼까요?" });
+        talkData.Add(190 + 3000, new string[] { "눈썰미가 대단하네요~\n자 거의 마지막입니다. A.I동상이있는 중앙홀로 가볼까요?:0" });
 
         talkData.Add(200 + 5000, new string[] { "안녕하세요. 선생님도 디자인을 맡은 선생님입니다.:0", "여러분들이 보고 있는 여러가지 디자인들은 누군가가 만들었겠죠?\n한번 우리도 같이 만들어봅시다.:0", "그중에서 선생님은 여러분에게 같은 그림 찾기를 준비했어요.\n5개의 쌍이 랜덤으로 있는 카드를 짝을 맞춰서 찾아봅시다.:0" });
 
@@ -89,6 +109,7 @@ public class TalkManager : MonoBehaviour
         protraitData.Add(7000 + 0, protraitArr[6]);
         protraitData.Add(8000 + 0, protraitArr[7]);
         protraitData.Add(9000 + 0, protraitArr[8]);
+        protraitData.Add(10000 + 0, protraitArr[9]);
 
 
 
@@ -107,7 +128,8 @@ public class TalkManager : MonoBehaviour
                 }
                 else
                 {
-                    return talkData[id - id % 100][talkIndex];
+                    
+                    return talkData[id - id % 100][talkIndex];        
                 }
             }
             else

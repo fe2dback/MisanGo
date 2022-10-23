@@ -18,15 +18,22 @@ public class StartBtn : MonoBehaviour
             Debug.Log("성별을 체크해주세요.");
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    public void StartButtonClick()
     {
-        
+        SceneManager.LoadScene("SelectScene");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ExitButtonClick()
     {
-        
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #elif UNITY_WEBPLAYER
+         Application.OpenURL(webplayerQuitURL);
+        #else
+         Application.Quit();
+        #endif
+
     }
+   
 }

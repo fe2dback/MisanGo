@@ -22,7 +22,11 @@ public class GameManager : MonoBehaviour
     public bool DfImgGameClear;
     public bool MathGameClear;
     public bool ShootingGameClear;
-    
+    public bool EnglishGameClear;
+    public bool AlgorithmsGameClear;
+    public bool CardGameClear;
+
+
 
     public static GameManager instance;
 
@@ -54,19 +58,42 @@ public class GameManager : MonoBehaviour
         
         if(DfImgGameClear == true)
         {
+            AudioManager.instance.questClearAuidoStart();
             questManager.NextQuest();
             Debug.Log(questManager.CheckQuest());
             QuestPanel.instance.questPanelTalk();
         }
         else if(MathGameClear == true)
         {
+            AudioManager.instance.questClearAuidoStart();
             questManager.NextQuest();
             Debug.Log(questManager.CheckQuest());
             QuestPanel.instance.questPanelTalk();
         }
-        
+        else if (EnglishGameClear == true)
+        {
+            AudioManager.instance.questClearAuidoStart();
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
+        else if (AlgorithmsGameClear == true)
+        {
+            AudioManager.instance.questClearAuidoStart();
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
+        else if (CardGameClear == true)
+        {
+            AudioManager.instance.questClearAuidoStart();
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
         else if(ShootingGameClear == true)
         {
+            AudioManager.instance.questClearAuidoStart();
             questManager.NextQuest();
             Debug.Log(questManager.CheckQuest());
             QuestPanel.instance.questPanelTalk();

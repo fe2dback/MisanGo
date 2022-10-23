@@ -67,6 +67,8 @@ public class QuestManager : MonoBehaviour
         questList.Add(230, new QuestData("신재경 선생님과 대화하기", new int[] { 4000 }));
 
         questList.Add(240, new QuestData("장성국 선생님과 대화하기", new int[] { 1000 }));
+
+        questList.Add(250, new QuestData("퀘스트 성공", new int[] { 0 }));
     }
 
     public int GetQuestTalkIndex(int id)
@@ -104,19 +106,46 @@ public class QuestManager : MonoBehaviour
         if(questId == 30)
         {
             SceneManager.LoadScene("MathGameScene");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
         }
         else if (questId == 60)
         {
             SceneManager.LoadScene("shooting");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
+        }
+        else if (questId == 120)
+        {
+            SceneManager.LoadScene("EnglishGame_Scene");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
+        }
+        else if (questId == 150)
+        {
+            SceneManager.LoadScene("Algorithms");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
         }
         // Park_T Quest
         else if (questId == 180)
         {
             SceneManager.LoadScene("FindDFIMG");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
         }
         else if(questId == 210)
         {
             SceneManager.LoadScene("cardgameScene");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
+        }
+        else if(questId == 250)
+        {
+            SceneManager.LoadScene("EndCredit");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.shoutAudioStart();
+            
         }
     }
 }

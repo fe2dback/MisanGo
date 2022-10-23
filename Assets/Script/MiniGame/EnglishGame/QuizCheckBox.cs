@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class QuizCheckBox : MonoBehaviour
 {
     public static bool checkBox;
+    public static bool checkBox2;
     Toggle m_goToggle;
     public string value;
     // Start is called before the first frame update
@@ -33,6 +34,28 @@ public class QuizCheckBox : MonoBehaviour
                 AnswerManager.instance.Quiz1 = false;
             }
             checkBox = m_goToggle.isOn;
+
+        }
+    }
+
+    public void AlToggleClick(bool isOn)
+    {
+        if (isOn == true)
+        {
+            //value = this.gameObject.name;
+            if (value == "No.2")
+            {
+                Debug.Log("ture");
+                Algorithms.instance.Quiz = true;
+
+
+            }
+            else
+            {
+                Debug.Log("false");
+                Algorithms.instance.Quiz = false;
+            }
+            checkBox2 = m_goToggle.isOn;
 
         }
     }

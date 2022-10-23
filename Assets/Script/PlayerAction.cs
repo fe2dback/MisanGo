@@ -27,7 +27,7 @@ public class PlayerAction : MonoBehaviour
     void Start()
     {
         SceneNumber = SceneManager.GetActiveScene().buildIndex;
-        if (SceneNumber == 8)
+        if (SceneNumber == 9)
         {
             DataMgr.instance.AppSceneCheck = true;
         }
@@ -35,10 +35,20 @@ public class PlayerAction : MonoBehaviour
         {
             DataMgr.instance.Game2SceneCheck = true;
         }
+        else if (SceneNumber == 17)
+        {
+            DataMgr.instance.ClassRoomCheck = true;
+        }
         else if(SceneNumber != 0 && check == false)
         {
             QuestPanel.instance.SetActive();
             check = true;
+        }
+
+        if(SceneNumber == 2 && AudioManager.instance.check == false)
+        {
+            AudioManager.instance.check = true;
+            AudioManager.instance.mainAudioStart();
         }
     }
 
@@ -122,6 +132,7 @@ public class PlayerAction : MonoBehaviour
             DataMgr.instance.playerTp = new Vector3((rb2d.transform.position.x * -1) - 1, rb2d.transform.position.y);
             SceneManager.LoadScene(SceneNumber - 1);
         }
+
         
     }
 

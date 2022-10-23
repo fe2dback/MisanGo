@@ -76,6 +76,8 @@ public class  DFIMG : MonoBehaviour
             GameManager.instance.DfImgGameClear = true;
             GameManager.instance.gameCheck();
             SceneManager.LoadScene("ApplicationProgrammingRoom");
+            AudioManager.instance.missionBackgroundAudioStop();
+            AudioManager.instance.mainAudioStart();
         }
 
 

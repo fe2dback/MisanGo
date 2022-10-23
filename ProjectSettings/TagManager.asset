@@ -12,6 +12,9 @@ TagManager:
   - Game1
   - Game2
   - hallway4
+  - FrontClassRoom
+  - BackClassRoom
+  - hallway1
   layers:
   - Default
   - TransparentFX

@@ -42,6 +42,8 @@ public class timer : MonoBehaviour
 			GameManager.instance.ShootingGameClear = true;
 			GameManager.instance.gameCheck();
 			SceneManager.LoadScene("Game1_Scene");
+			AudioManager.instance.missionBackgroundAudioStop();
+			AudioManager.instance.mainAudioStart();
 
 			timeCounter = false;
 			counterText.color = Color.green;
