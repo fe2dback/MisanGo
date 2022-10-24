@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
@@ -25,9 +26,15 @@ public class Score : MonoBehaviour
 
     void clear()
     {
-        if(score >= 3)
+        if(score >= 5)
         {
-            Debug.Log("clear");
+            //Debug.Log("clear");
+            DataMgr.instance.flappyBird = true;
+            GameManager.instance.flapGameClear = true;
+            GameManager.instance.gameCheck();
+            SceneManager.LoadScene("Game2_Scene");
+            AudioManager.instance.missionBackgroundAudioStop();
+            AudioManager.instance.mainAudioStart();
         }
     }
 }

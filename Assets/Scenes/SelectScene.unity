@@ -4172,6 +4172,7 @@ MonoBehaviour:
   EnglishGameClear: 0
   AlgorithmsGameClear: 0
   CardGameClear: 0
+  flapGameClear: 0
 --- !u!4 &1694692934
 Transform:
   m_ObjectHideFlags: 0

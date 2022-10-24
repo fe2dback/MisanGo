@@ -115,6 +115,12 @@ public class QuestManager : MonoBehaviour
             AudioManager.instance.mainAudioStop();
             AudioManager.instance.missionBackgroundAudioStart();
         }
+        else if (questId == 90)
+        {
+            SceneManager.LoadScene("flapScene");
+            AudioManager.instance.mainAudioStop();
+            AudioManager.instance.missionBackgroundAudioStart();
+        }
         else if (questId == 120)
         {
             SceneManager.LoadScene("EnglishGame_Scene");

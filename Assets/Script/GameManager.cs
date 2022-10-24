@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public bool EnglishGameClear;
     public bool AlgorithmsGameClear;
     public bool CardGameClear;
+    public bool flapGameClear;
 
 
 
@@ -98,8 +99,15 @@ public class GameManager : MonoBehaviour
             Debug.Log(questManager.CheckQuest());
             QuestPanel.instance.questPanelTalk();
         }
-        
-        
+        else if (flapGameClear == true)
+        {
+            AudioManager.instance.questClearAuidoStart();
+            questManager.NextQuest();
+            Debug.Log(questManager.CheckQuest());
+            QuestPanel.instance.questPanelTalk();
+        }
+
+
     }
 
     public void Action(GameObject scanObj)
