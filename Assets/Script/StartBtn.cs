@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StartBtn : MonoBehaviour
 {
+    public GameObject gameObject;
 
     public void ButtonClick()
     {
@@ -22,6 +23,16 @@ public class StartBtn : MonoBehaviour
     public void StartButtonClick()
     {
         SceneManager.LoadScene("SelectScene");
+    }
+
+    public void creditButtonClick()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void creditCloseButtonClick()
+    {
+        gameObject.SetActive(false);
     }
 
     public void ExitButtonClick()
