@@ -32,7 +32,7 @@ public class inputField : MonoBehaviour
         if (answer == "16" && check != true)
         {
             fail.SetActive(false);
-            DataMgr.instance.Game2SceneCheck = true;
+            //DataMgr.instance.Game2SceneCheck = true;
             GameManager.instance.MathGameClear = true;
             GameManager.instance.gameCheck();
             SceneManager.LoadScene("TeacherRoom_Scene");

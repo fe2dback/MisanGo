@@ -9,7 +9,7 @@ public class BuildSetting : MonoBehaviour
     void Awake()
     {
 
-        Screen.SetResolution(600, 1920, true);
+        //Screen.SetResolution(600, 1920, true);
 
     }
 
