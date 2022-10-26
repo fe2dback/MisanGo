@@ -18,6 +18,7 @@ public class inputField : MonoBehaviour
     }
     void Update()
     {
+
         if(answer.Length > 0 && Input.GetKeyDown(KeyCode.Return))
         {
             check = true;
@@ -46,6 +47,7 @@ public class inputField : MonoBehaviour
             if(answer != "16")
             {
                 fail.SetActive(true);
+                check = false;
             }
             
         }
