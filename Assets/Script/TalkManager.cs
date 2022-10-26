@@ -21,11 +21,11 @@ public class TalkManager : MonoBehaviour
     {
         // Talk Data
         // Npc Jang_T : 1000, Npc Kim_T : 2000, Npc Park_T : 3000
-        talkData.Add(1000, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0"});
+        talkData.Add(1000, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0" });
         talkData.Add(1000 + 100, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0" });
         talkData.Add(1000 + 200, new string[] { "자 이제 간략하게 설명을 들었으니 이제 선생님들 께서 퀘스트를 줄거야. \n각 교실에서 퀘스트를 달성 후 나에게 오면 입학허가장을 줄게!!:0" });
 
-        talkData.Add(2000, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0"});
+        talkData.Add(2000, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0" });
         talkData.Add(2000 + 100, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0" });
         talkData.Add(2000 + 200, new string[] { "안녕하세요. 수학을 가르치는 김정태 선생님입니다.:0" });
 
@@ -58,6 +58,17 @@ public class TalkManager : MonoBehaviour
         talkData.Add(10000, new string[] { "test:0" });
         talkData.Add(10000 + 100, new string[] { "test:0" });
         talkData.Add(10000 + 200, new string[] { "test:0" });
+
+        // obj
+        talkData.Add(100, new string[] { "쓰레기가 많이 버려진 쓰레기통이다." });
+        
+        talkData.Add(200, new string[] { "빈 쓰레기통이다." });
+
+        talkData.Add(300, new string[] { "그냥 필통이다." });
+
+        talkData.Add(400, new string[] { "은지가 버린 양말이다." });
+
+
 
         // Quest Talk
         talkData.Add(10 + 1000, new string[] {"안녕! 우리 과에 온걸 환영합니다. 5층에 방문해줘서 고마워요.:0", "나는 인공지능콘텐츠과 부장 장성국이라고해요. \n" +
@@ -122,6 +133,43 @@ public class TalkManager : MonoBehaviour
         {
             if(!talkData.ContainsKey(id - id % 10))
             {
+                if(QuestManager.instance.questId < 100)
+                {
+                    if (talkIndex == talkData[id - id % 100].Length)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+
+                        return talkData[id - id % 100][talkIndex];
+                    }
+                }
+                else if(QuestManager.instance.questId>= 100 && QuestManager.instance.questId < 200)
+                {
+                    if (talkIndex == talkData[(id - id % 100) - 100].Length)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+
+                        return talkData[(id - id % 100) - 100][talkIndex];
+                    }
+                }
+                else if (QuestManager.instance.questId >= 200 && QuestManager.instance.questId < 300)
+                {
+                    if (talkIndex == talkData[(id - id % 100) - 200].Length)
+                    {
+                        return null;
+                    }
+                    else
+                    {
+
+                        return talkData[(id - id % 100) - 200][talkIndex];
+                    }
+                }
+                /*
                 if (talkIndex == talkData[id - id % 100].Length)
                 {
                     return null;
@@ -131,6 +179,7 @@ public class TalkManager : MonoBehaviour
                     
                     return talkData[id - id % 100][talkIndex];        
                 }
+                */
             }
             else
             {

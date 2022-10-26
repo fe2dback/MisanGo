@@ -9,11 +9,22 @@ public class QuestManager : MonoBehaviour
     public int questActionIndex;
 
     Dictionary<int, QuestData> questList;
+
+    public static QuestManager instance;
+
     // Start is called before the first frame update
     void Awake()
     {
         questList = new Dictionary<int, QuestData>();
         GenerateData();
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != null)
+        {
+            return;
+        }
         DontDestroyOnLoad(gameObject);
     }
 

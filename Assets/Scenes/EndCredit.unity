@@ -501,7 +501,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "      \uB514\uC790\uC778                 \uC784\uAC00\uBBFC, \uAE40\uC740\uC544\n\n\uD504\uB85C\uADF8\uB798\uBC0D                
     \uAE40\uBCD1\uCC2C, \uBC15\uC0C1\uC900\n\n\uAE30\uD68D              \uC774\uD76C\uC218\uC324,
-    \uC774\uC608\uC900\n"
+    \uAE40\uC608\uC900\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95abfecc65708b5489f7896043889418, type: 2}
   m_sharedMaterial: {fileID: -6625883066485536450, guid: 95abfecc65708b5489f7896043889418, type: 2}
@@ -1929,6 +1929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

@@ -48,6 +48,7 @@ public class PlayerAction : MonoBehaviour
         if(SceneNumber == 2 && AudioManager.instance.check == false)
         {
             AudioManager.instance.check = true;
+            MainAudio.instance.MusicDestroy();
             AudioManager.instance.mainAudioStart();
         }
     }
