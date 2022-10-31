@@ -86,10 +86,10 @@ public class Player : MonoBehaviour
         
 
 
-        if ((isTouchRight && h == 1) || (isTouchLeft && h == -1)/* || !isControl*/)
+        if ((isTouchRight && h == 1) || (isTouchLeft && h == -1)|| !isControl)
             h = 0;
         
-        if ((isTouchTop && v == 1) || (isTouchBottom && v == -1)/* || !isControl*/)
+        if ((isTouchTop && v == 1) || (isTouchBottom && v == -1)|| !isControl)
             v = 0;
         
         Vector3 curPos = transform.position;
