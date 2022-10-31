@@ -45,25 +45,25 @@ public class  DFIMG : MonoBehaviour
             input = false;
         }
 
-        if (touchPosition.x > 1270 &&  touchPosition.x < 1370 && touchPosition.y > 710 && touchPosition.y < 780)
+        if (touchPosition.x > 1320 &&  touchPosition.x < 1400 && touchPosition.y > 750 && touchPosition.y < 870)
         {
             StartCoroutine(first());
             //달
         }
 
-        if (touchPosition.x > 1050  &&  touchPosition.x < 1115 && touchPosition.y > 550 && touchPosition.y < 635)
+        if (touchPosition.x > 1080  &&  touchPosition.x < 1110 && touchPosition.y > 635 && touchPosition.y < 690)
         {
             StartCoroutine(second());
             //커튼
         }
 
-        if (touchPosition.x > 1110  &&  touchPosition.x < 1200 && touchPosition.y > 550 && touchPosition.y < 610)
+        if (touchPosition.x > 1150  &&  touchPosition.x < 1200 && touchPosition.y > 610 && touchPosition.y < 670)
         {
             StartCoroutine(third());
             //머리띠
         }
 
-        if (touchPosition.x > 1660  &&  touchPosition.x < 1800 && touchPosition.y > 370 && touchPosition.y < 500)
+        if (touchPosition.x > 1750  &&  touchPosition.x < 1900 && touchPosition.y > 430 && touchPosition.y < 540)
         {
             StartCoroutine(fourth());
             //화분

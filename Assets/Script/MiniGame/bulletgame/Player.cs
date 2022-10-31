@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
-        /*
+        
         if (joyControl[0]) { h = -1; v = 1; }
         if (joyControl[1]) { h = 0; v = 1; }
         if (joyControl[2]) { h = 1; v = 1; }
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
         if (joyControl[6]) { h = -1; v = -1; }
         if (joyControl[7]) { h = 0; v = -1; }
         if (joyControl[8]) { h = 1; v = -1; }
-        */
+        
 
 
         if ((isTouchRight && h == 1) || (isTouchLeft && h == -1)/* || !isControl*/)

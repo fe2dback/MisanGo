@@ -143,6 +143,7 @@ public class GameManager : MonoBehaviour
         if(talkData == null)
         {
             isAction = false;
+            PlayerAction.boolCheck();
             talkIndex = 0;
             Debug.Log(questManager.CheckQuest(id));
             QuestPanel.instance.questPanelTalk();

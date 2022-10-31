@@ -13,6 +13,8 @@ public class StartBtn : MonoBehaviour
         if(CheckBox.checkBox == true)
         {
             SceneManager.LoadScene("PlayScene");
+            
+
         }
         else
         {
